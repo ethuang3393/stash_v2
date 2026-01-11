@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center align-items-center" style="height: 80vh;">
+    <div class="col-md-5">
+        <div class="card p-5 text-center">
+            <div class="mb-4">
+                <i class="fas fa-bookmark fa-3x" style="color: #6c5ce7;"></i>
+            </div>
+            <h2 class="mb-3">Stash</h2>
+            <p class="text-muted mb-4">Save links, get AI summaries.</p>
+            <form action="{{ url_for('login') }}" method="POST">
+                <div class="mb-3">
+                    <input type="text" name="user_name" class="form-control form-control-lg" placeholder="Enter your name" required>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-brand btn-lg">Access Stash</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
